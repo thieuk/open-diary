@@ -31,3 +31,21 @@ nav .material-icons {
 nav span a {
     text-decoration: none;
 }
+
+/* Forms */
+form {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+form input, form button {
+    border: 1px solid #000;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.error-msg {
+    text-align: center;
+    color: #f00;
+}
