@@ -15,14 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (is_input_empty($username, $email, $pwd)) {
             $errors[] = "Fill in all fields.";
         }
-        if (is_email_invalid($email)) {
-            $errors[] = "Invalid Email.";
-        }
-        if (is_username_taken($pdo, $username)) {
-            $errors[] = "User Taken.";
-        }
-        if (is_email_registered($pdo, $email)) {
-            $errors[] = "Email already exist.";
+        else {
+            if (is_email_invalid($email)) {
+                $errors[] = "Invalid Email.";
+            }
+            if (is_username_taken($pdo, $username)) {
+                $errors[] = "User Taken.";
+            }
+            if (is_email_registered($pdo, $email)) {
+                $errors[] = "Email already exist.";
+            }
         }
 
         if ($errors) {

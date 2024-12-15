@@ -1,6 +1,5 @@
 <?php 
     require_once "includes/config_session.inc.php";
-    require_once "includes/signup_view.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,26 +10,24 @@
     <link rel="stylesheet" type="text/css" href="css/account.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>OPEN DIARY</title>
-    <title>SIGN UP</title>
+    <title>LOG IN</title>
 </head>
 <body>
     <nav>
         <h1>OPEN DIARY</h1>
         <span class="material-icons">search</span>
         <span class="material-icons">
-            <a href="login.php">account_circle</a>
+            <a href="account.php">account_circle</a>
         </span>
     </nav>
-    <form action="includes/signup.inc.php" method="POST">
-        <h1>SIGN UP</h1>
-        <input type="text" name="username" placeholder="Enter Username">
+    <form action="includes/login.inc.php" method="POST">
+        <h1>LOG IN</h1>
         <input type="email" name="email" placeholder="Enter Email">
         <input type="password" name="pwd" placeholder="Enter Password">
-        <button type="submit">SIGN UP</button>
+        <button type="submit">LOG IN</button>
+        <span>
+            Don't have a password? <a href="signup.php">SIGN UP</a>
+        </span>
     </form>
-
-    <?php
-        check_signup_errors();
-    ?>
 </body>
 </html>

@@ -12,7 +12,7 @@
         <h1>OPEN DIARY</h1>
         <span class="material-icons">search</span>
         <span class="material-icons">
-            <a href="signup.php">account_circle</a>
+            <a href="login.php">account_circle</a>
         </span>
     </nav>
 </body>
