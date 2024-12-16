@@ -17,5 +17,12 @@
     <form action="includes/log_out.inc.php" method="POST">
         <button type="submit">LOG OUT</button>
     </form>
+
+    <form action="includes/entry.inc.php" method="POST">
+        <textarea id="entry" name="entry" placeholder="Entery your diary entry..."></textarea>
+        <button type="submit">POST ENTRY</button>
+    </form>
+
+    
 </body>
 </html>
