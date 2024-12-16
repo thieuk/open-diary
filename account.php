@@ -1,8 +1,8 @@
 <?php 
     require_once "includes/config_session.inc.php";
 
-    if (!isset($_SESSION["login_status"])) {
-        header("Location: ../login.php");
+    if (!isset($_SESSION["user_id"])) {
+        header("Location: login.php");
     }
 ?>
 
@@ -14,6 +14,8 @@
     <title>ACCOUNT</title>
 </head>
 <body>
-    <p>LOGGED IN SUCESSFULLY</p>
+    <form action="log_out.inc.php" method="POST">
+        <button type="submit">LOG OUT</button>
+    </form>
 </body>
 </html>

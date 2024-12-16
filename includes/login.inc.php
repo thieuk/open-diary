@@ -25,8 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         regenerate_session_id();
 
-        $user_info = does_email_exit($pdo, $email);
-        $_SESSION["login_status"] = 1;
+        $user_info = get_user($pdo, $email);
         $_SESSION["user_id"] = $user_info["id"];
         $_SESSION["username"] = $user_info["username"];
 
