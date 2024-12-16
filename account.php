@@ -14,7 +14,7 @@
     <title>ACCOUNT</title>
 </head>
 <body>
-    <form action="log_out.inc.php" method="POST">
+    <form action="includes/log_out.inc.php" method="POST">
         <button type="submit">LOG OUT</button>
     </form>
 </body>
