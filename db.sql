@@ -15,5 +15,5 @@ CREATE TABLE entry (
     entry TEXT NOT NULL,
     date_created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     users_id INT(11) NOT NULL,
-    FOREIGN KEY (users_id) REFERENCES users(id)
+    FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE
 );
