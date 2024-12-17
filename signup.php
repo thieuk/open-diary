@@ -1,6 +1,6 @@
 <?php 
     require_once "includes/config_session.inc.php";
-    require_once "includes/signup_view.inc.php";
+    require_once "includes/signup/signup_view.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
             <a href="login.php">account_circle</a>
         </span>
     </nav>
-    <form action="includes/signup.inc.php" method="POST">
+    <form action="includes/signup/signup.inc.php" method="POST">
         <h1>SIGN UP</h1>
         <input type="text" name="username" placeholder="Enter Username">
         <input type="email" name="email" placeholder="Enter Email">

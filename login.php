@@ -20,7 +20,7 @@
             <a href="account.php">account_circle</a>
         </span>
     </nav>
-    <form action="includes/login.inc.php" method="POST">
+    <form action="includes/login/login.inc.php" method="POST">
         <h1>LOG IN</h1>
         <input type="email" name="email" placeholder="Enter Email">
         <input type="password" name="pwd" placeholder="Enter Password">

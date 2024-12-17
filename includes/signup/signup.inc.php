@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"];
 
     try {
-        require_once "config_session.inc.php";
-        require_once "dbh.inc.php";
+        require_once "../config_session.inc.php";
+        require_once "../dbh.inc.php";
         require_once "signup_model.inc.php";
         require_once "signup_contr.inc.php";
 
@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($errors) {
             $_SESSION["signup_errors"] = $errors;
-            header("Location: ../signup.php");
+            header("Location: ../../signup.php");
             die("Query Failed: " . $e->getMessage());
         }
 
         create_user($pdo, $username, $email, $pwd);
 
-        header("Location: ../signup.php?signup=success");
+        header("Location: ../../signup.php?signup=success");
         
         $pdo = null;
         $stmt = null;
@@ -43,11 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die();
     }
     catch (PDOException $e) {    
-        header("Location: ../signup.php");
+        header("Location: ../../signup.php");
         die("Query Failed: " . $e->getMessage());
     }
 }
 else {
-    header("Location: ../signup.php");
+    header("Location: ../../signup.php");
     die();
 }

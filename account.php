@@ -18,13 +18,13 @@
         <button type="submit">LOG OUT</button>
     </form>
 
-    <form action="includes/entry.inc.php" method="POST">
+    <form action="includes/entry/entry.inc.php" method="POST">
         <textarea id="entry" name="entry" placeholder="Entery your diary entry..."></textarea>
         <button type="submit">POST ENTRY</button>
     </form>
 
     <?php 
-        require_once("includes/account.inc.php");
+        require_once("includes/account/account.inc.php");
     ?>
 </body>
 </html>

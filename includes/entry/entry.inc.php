@@ -4,8 +4,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $entry = $_POST["entry"];
 
     try {
-        require_once("config_session.inc.php");
-        require_once("dbh.inc.php");
+        require_once("../config_session.inc.php");
+        require_once("../dbh.inc.php");
         require_once("entry_model.inc.php");
         require_once("entry_contr.inc.php");
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if (isset($error)) {
             $_SESSION["entry_errors"] = $error;
-            header("Location: ../account.php");
+            header("Location: ../../account.php");
             die("Query Failed: " . $e->getMessage());
         }
 
@@ -27,15 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $pdo = null;
         $stmt = null;
 
-        header("Location: ../account.php");
+        header("Location: ../../account.php");
         die();
     }
     catch (PDOException $e) {
-        header("Location: ../index.php");
+        header("Location: ../../index.php");
         die("Query Failed: " . $e->getMessage());
     }
 }
 else {
-    header("Location: ../index.php");
+    header("Location: ../../index.php");
     die();
 }
