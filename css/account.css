@@ -1,48 +1,52 @@
-:root {
-    --main-color: #FFD1DC;
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: var(--main-color);
+    background-color: #FFD1DC;
     font-family: sans-serif;
 }
 
-/* Nav Bar */
-nav {
-    height: 65px;
-    background-color: #fff1d1;
-    padding: 0 30px;
-    box-shadow: 0 1px 15px #a8a8a8;
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 10px;
-    align-items: center;
-}
-
-nav .material-icons {
-    font-size: 32px !important;
-}
-
-nav span a {
-    text-decoration: none;
-}
-
 /* Forms */
-form {
+.container {
+    width: 100%;
+    height: calc(100vh - 65px);
     display: grid;
-    place-items: center;
-    gap: 10px;
+    place-content: center;
 }
 
-form input, form button {
-    border: 1px solid #000;
+form {
+    width: 350px;
+    height: 400px;
+    display: grid;
+    place-content: center;
+    gap: 10px;
+    background-color: #fff1d1;
+    box-shadow: 0 0 15px #a8a8a8;
+    border-radius: 15px;
+}
+
+form h1 {
+    text-align: center;
     font-size: 24px;
+}
+
+form input {
+    font-size: 16px;
     padding: 5px;
+}
+
+form button {
+    background-color: #FFD1DC;
+    font-size: 14px;
+    padding: 5px;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+form hr {
+    margin: 15px 0;
 }
 
 .error-msg {

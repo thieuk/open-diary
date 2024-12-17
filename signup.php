@@ -9,25 +9,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/account.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>OPEN DIARY</title>
     <title>SIGN UP</title>
 </head>
 <body>
-    <nav>
-        <h1>OPEN DIARY</h1>
-        <span class="material-icons">search</span>
-        <span class="material-icons">
-            <a href="login.php">account_circle</a>
-        </span>
-    </nav>
-    <form action="includes/signup/signup.inc.php" method="POST">
-        <h1>SIGN UP</h1>
-        <input type="text" name="username" placeholder="Enter Username">
-        <input type="email" name="email" placeholder="Enter Email">
-        <input type="password" name="pwd" placeholder="Enter Password">
-        <button type="submit">SIGN UP</button>
-    </form>
+    <?php 
+        require_once("nav.php"); 
+    ?>
+    
+    <div class="container">
+        <form action="includes/signup/signup.inc.php" method="POST">
+            <h1>SIGN UP</h1>
+            <input type="text" name="username" placeholder="Enter Username">
+            <input type="email" name="email" placeholder="Enter Email">
+            <input type="password" name="pwd" placeholder="Enter Password">
+            <button type="submit">SIGN UP</button>
+            <hr>
+            <div>
+                Already have an account? <a href="login.php">LOG IN</a>
+            </div>
+        </form>
+    <div>
 
     <?php
         check_signup_errors();
