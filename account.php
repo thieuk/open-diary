@@ -23,6 +23,8 @@
         <button type="submit">POST ENTRY</button>
     </form>
 
-    
+    <?php 
+        require_once("includes/account.inc.php");
+    ?>
 </body>
 </html>

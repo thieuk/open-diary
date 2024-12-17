@@ -24,9 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         set_entry($pdo, $entry, $_SESSION["user_id"]);
 
+        $past_entries = get_past_entries($pdo, $user_id);
+        $_SESSION["past_entries"] = $past_entries;
+
         $pdo = null;
         $stmt = null;
 
+        header("Location: ../account.php");
         die();
     }
     catch (PDOException $e) {
