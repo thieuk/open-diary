@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         require_once("../config_session.inc.php");
         require_once("../dbh.inc.php");
-        require_once("entry_model.inc.php");
-        require_once("entry_contr.inc.php");
+        require_once("set_entry_model.inc.php");
+        require_once("set_entry_contr.inc.php");
 
         if (is_input_empty($entry)) {
             $error = "Fill in all fields.";
