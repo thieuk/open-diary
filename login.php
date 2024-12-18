@@ -20,7 +20,6 @@
             <h1>LOG IN</h1>
             <input type="email" name="email" placeholder="Enter Email">
             <input type="password" name="pwd" placeholder="Enter Password">
-            <input type="password" name="pwd_again" placeholder="Enter Password Again">
             <button type="submit">LOG IN</button>
             <hr>
             <div>

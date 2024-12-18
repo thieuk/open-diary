@@ -22,16 +22,16 @@
             <input type="text" name="username" placeholder="Enter Username">
             <input type="email" name="email" placeholder="Enter Email">
             <input type="password" name="pwd" placeholder="Enter Password">
+            <input type="password" name="pwd_again" placeholder="Enter Password Again">
             <button type="submit">SIGN UP</button>
+
+            <?php check_signup_errors(); ?>
+            
             <hr>
             <div>
                 Already have an account? <a href="login.php">LOG IN</a>
             </div>
         </form>
     <div>
-
-    <?php
-        check_signup_errors();
-    ?>
 </body>
 </html>
