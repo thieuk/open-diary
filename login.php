@@ -1,5 +1,6 @@
 <?php 
     require_once "includes/config_session.inc.php";
+    require_once "includes/login/login_view.inc.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,9 @@
             <input type="email" name="email" placeholder="Enter Email">
             <input type="password" name="pwd" placeholder="Enter Password">
             <button type="submit">LOG IN</button>
+
+            <?php check_login_error(); ?>
+
             <hr>
             <div>
                 Don't have a password? <a href="signup.php">SIGN UP</a>

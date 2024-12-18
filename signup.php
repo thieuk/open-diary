@@ -25,7 +25,7 @@
             <input type="password" name="pwd_again" placeholder="Enter Password Again">
             <button type="submit">SIGN UP</button>
 
-            <?php check_signup_errors(); ?>
+            <?php check_signup_error(); ?>
             
             <hr>
             <div>

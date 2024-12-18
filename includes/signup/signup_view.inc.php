@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function check_signup_errors() {
+function check_signup_error() {
     if (isset($_SESSION["signup_error"])) {
         echo '<p class="error-msg">*' . $_SESSION["signup_error"] . '</p>';
         unset($_SESSION["signup_error"]);

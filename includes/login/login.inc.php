@@ -11,14 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once "login_contr.inc.php";
 
         if (is_input_empty($email, $pwd)) {
-            $errors = "Fill in all fields.";
+            $error = "Fill in all fields.";
         }
         else if (!does_email_exit($pdo, $email) || is_password_invalid($pdo, $email, $pwd)) {
-            $errors = "Incorrect email or password.";
+            $error = "Incorrect email or password.";
         }
 
-        if ($errors) {
-            $_SESSION["login_errors"] = $errors;
+        if (isset($error)) {
+            $_SESSION["login_error"] = $error;
             header("Location: ../../login.php");
             die("Query Failed: " . $e->getMessage());
         }
