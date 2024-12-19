@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/account.css">
+    <link rel="icon" type="image" href="img/account_circle.png">
     <title>LOG IN</title>
 </head>
 <body>
