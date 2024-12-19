@@ -1,6 +1,7 @@
 <?php 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    require_once "config_session.inc.php";
     session_unset();
     session_destroy();
 
