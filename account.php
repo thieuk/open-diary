@@ -20,7 +20,8 @@
     </form>
 
     <form action="includes/set_entry/set_entry.inc.php" method="POST">
-        <textarea id="entry" name="entry" placeholder="Entery your diary entry..."></textarea>
+        <textarea id="title" name="title" placeholder="Enter a title (5-100 characters)..."></textarea>
+        <textarea id="entry" name="entry" placeholder="Enter your diary entry..."></textarea>
         <button type="submit">POST ENTRY</button>
     </form>
 

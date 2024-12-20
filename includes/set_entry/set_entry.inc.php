@@ -1,6 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $title = $_POST["title"];
     $entry = $_POST["entry"];
 
     try {
@@ -9,10 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once("set_entry_model.inc.php");
         require_once("set_entry_contr.inc.php");
 
-        if (is_input_empty($entry)) {
+        if (is_input_empty($title, $entry)) {
             $error = "Fill in all fields.";
         }
-        else if (is_input_long_enough($entry)) {
+        else if (!is_title_length_valid($title)) {
+            $error = "The title must be between 5 and 100 characters.";
+        }
+        else if (!is_input_long_enough($entry)) {
             $error = "Entry must contains at least 15 characters.";
         }
 
@@ -22,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die("Query Failed: " . $e->getMessage());
         }
 
-        set_entry($pdo, $entry, $_SESSION["user_id"]);
+        set_entry($pdo, $title, $entry, $_SESSION["user_id"]);
 
         $pdo = null;
         $stmt = null;
