@@ -1,0 +1,37 @@
+#entry-container {
+    width: 700px;
+    background: #fff1d1;
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #000;
+}
+
+#entry-container p {
+    margin: 10px 0;
+}
+
+#title, #date {
+    font-weight: bold;
+}
+
+#entry {
+    line-height: 25px;
+}
+
+#back-bttn {
+    position: absolute;
+    top: 95px;
+    left: 35px;
+    background-color: #fff1d1;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+#back {
+    margin-left: 10px;
+    font-size: 18px;
+}
