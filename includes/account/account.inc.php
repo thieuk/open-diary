@@ -7,8 +7,7 @@ try {
     require_once("account_contr.inc.php");
 
     $past_entries = get_past_entries($pdo, $_SESSION["user_id"]);
-    $_SESSION["past_entries"] = $past_entries;
-    display_entries();
+    display_entries($past_entries);
 
     $pdo = null;
     $stmt = null;

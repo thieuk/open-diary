@@ -8,7 +8,12 @@ body {
     font-family: sans-serif;
 }
 
-/* Forms */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* log in and sign up forms */
 .container {
     width: 100%;
     height: calc(100vh - 65px);
@@ -16,7 +21,7 @@ body {
     place-content: center;
 }
 
-form {
+.container form {
     width: 350px;
     height: 400px;
     display: grid;
@@ -27,17 +32,17 @@ form {
     border-radius: 15px;
 }
 
-form h1 {
+.container form h1 {
     text-align: center;
     font-size: 24px;
 }
 
-form input {
+.container form input {
     font-size: 16px;
     padding: 5px;
 }
 
-form button {
+.container form button {
     background-color: #FFD1DC;
     font-size: 14px;
     padding: 5px;
@@ -45,11 +50,94 @@ form button {
     border: 1px solid #000;
 }
 
-form hr {
+.container form hr {
     margin: 15px 0;
 }
 
 .error-msg {
     text-align: center;
     color: #f00;
+}
+
+/* account form */
+#account-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.account-bttn {
+    background-color: #FFD1DC;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* entry */
+#entry-container {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#more {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    cursor: pointer;
+}
+
+.entry button {
+    display: block;
+    width: 700px;
+    height: 100px;
+    background: #fff1d1;
+    margin: 20px auto;
+    padding: 0 15px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+button:hover, .account-bttn:hover {
+    box-shadow: 0 0 10px #a8a8a8;
+}
+
+#entry_title {
+    font-size: 18px;
+    text-align: start;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+#title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#entry_date {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#load-bttn {
+    display: block;
+    background-color: #fff1d1;
+    font-size: 14px;
+    margin: 20px auto;
+    padding: 5px 15px;
+    font-weight: bold;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* add entry */
+#add-entry-container {
+    display: flex;
+    flex-direction: column;
 }

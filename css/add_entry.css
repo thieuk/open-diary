@@ -1,0 +1,44 @@
+#add-entry-container {
+    height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#add-entry-container * {
+    width: 700px;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #000;
+}
+
+#add-entry-container textarea {
+    height: 400px;
+}
+
+#add-entry-container button {
+    background-color: #FFD1DC;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#back-bttn {
+    position: absolute;
+    top: 95px;
+    left: 35px;
+    background-color: #fff1d1;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+#back {
+    margin-left: 10px;
+    font-size: 18px;
+}
