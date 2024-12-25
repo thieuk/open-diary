@@ -84,11 +84,36 @@ a {
     margin: 0 auto;
 }
 
-#more {
+#del-entry-bttn {
+    visibility: hidden;
     position: absolute;
-    right: 5px;
-    top: 7px;
+    right: 0;
+    top: 15px;
+    z-index: -99;
+    background-color: #fff;
+    color: #f00;
+    font-weight: 900;
+    padding: 3px 5px;
+    border: 1px solid #000;
     cursor: pointer;
+    transform: translateX(0);
+    transition: all 0.2s ease-in-out;
+}
+
+#del-entry-bttn:hover {
+    box-shadow: none;
+    background-color: #f00;
+    color: #fff;
+}
+
+#entry-container:hover #del-entry-bttn {
+    visibility: visible;
+    z-index: 1;
+    transform: translateX(68px);
+}
+
+#entry-container:not(:hover) #del-entry-bttn {
+    transition-delay: 0.5s;
 }
 
 .entry button {

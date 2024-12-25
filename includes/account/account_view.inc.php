@@ -11,8 +11,9 @@ function display_entries(array|bool $entries) {
 
             echo <<<HTML
                 <div id="entry-container">
-                    <form action="includes/redirect_to_read_entry.inc.php" method="POST" if="more">
-                        <span class="material-icons" id="more">more_vert</span>
+                    <form action="includes/delete_entry/delete_entry.inc.php" method="POST" id="more">
+                        <input type="hidden" name="entry_id" value="$entry_id">
+                        <button type="submit" id="del-entry-bttn">DELETE</button>
                     </form>
                     <form action="includes/redirect_to_read_entry.inc.php" method="POST" class="entry">
                         <input type="hidden" name="entry_id" value="$entry_id">
