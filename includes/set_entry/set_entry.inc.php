@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (isset($error)) {
-            $_SESSION["entry_errors"] = $error;
-            header("Location: ../../account.php");
-            die("Query Failed: " . $e->getMessage());
+            $_SESSION["add_entry_errors"] = $error;
+            header("Location: ../../add_entry.php");
+            die();
         }
 
         set_entry($pdo, $title, $entry, $_SESSION["user_id"]);

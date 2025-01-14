@@ -54,11 +54,6 @@ a {
     margin: 15px 0;
 }
 
-.error-msg {
-    text-align: center;
-    color: #f00;
-}
-
 /* account form */
 #account-container {
     display: flex;
